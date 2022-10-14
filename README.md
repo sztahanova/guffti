@@ -1,2 +1,2 @@
 # guffti
- Gufftáv Ffápa hivataloff weboldala
+Gufftáv Ffápa hivataloff weboldala
