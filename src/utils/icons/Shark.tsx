@@ -1,9 +1,9 @@
-import { Blank } from "grommet-icons";
-import { ReactComponent as SharkIcon } from "./shark.svg";
+import { Blank, IconProps } from "grommet-icons";
+import { ReactComponent as SharkIcon } from "./shark_24x24.svg";
 
-export const Shark = () => {
+export const Shark = (props: IconProps) => {
   return (
-    <Blank>
+    <Blank {...props}>
       <SharkIcon />
     </Blank>
   );
