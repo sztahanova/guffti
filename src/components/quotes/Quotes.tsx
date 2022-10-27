@@ -5,9 +5,18 @@ import { QuoteCarouselItemProps } from "./Quotes.types";
 const QuoteCarouselItem: FC<QuoteCarouselItemProps> = ({
   quote,
   backgroundColor,
+  backgroundImage,
 }: QuoteCarouselItemProps) => {
   return (
-    <Box fill background={backgroundColor} pad='small'>
+    <Box
+      fill
+      background={{
+        color: backgroundColor,
+        image: `url(${backgroundImage})`,
+        size: "contain",
+      }}
+      pad="small"
+    >
       <Text color="light-2" size="xlarge">
         {quote}
       </Text>
@@ -16,11 +25,13 @@ const QuoteCarouselItem: FC<QuoteCarouselItemProps> = ({
 };
 
 export const QuotesCarousel = () => {
+  // play={10000}
   return (
-    <Carousel fill play={10000} height="medium">
+    <Carousel height="medium" style={{ aspectRatio: "3 / 2" }}>
       <QuoteCarouselItem
         quote="Senki sem tud olyan nagyot ütni, mint az élet."
         backgroundColor="pink"
+        backgroundImage="shark_1_1031x687.jpg"
       />
       <QuoteCarouselItem
         quote="Nem az számít, mekkorát tudsz ütni, hanem hogy milyen keményen állod az ütéseket, miközben csak mész előre."
