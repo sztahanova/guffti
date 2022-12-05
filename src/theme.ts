@@ -4,6 +4,8 @@ export const gufftiTheme: ThemeType = {
   global: {
     colors: {
       brand: "#0071aa",
+      "accent-1": "#1081c4",
+      "accent-2": "#47a9de",
       background: {
         dark: "#111111",
         light: "#FFFFFF",

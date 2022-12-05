@@ -19,7 +19,7 @@ export const Footer = () => {
             "Effer valamikor itt leff af ÁSZF leíráff, ha FFita nem leff ilyen luffta!"
           )
         }
-      ></Button>
+      />
     </GrommetFooter>
   );
 };

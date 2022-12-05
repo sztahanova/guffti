@@ -1,5 +1,6 @@
 import { Main } from "grommet";
 import styled from "styled-components";
+import { AboutMe } from "../about-me/AboutMe";
 import { QuotesCarousel } from "../quotes/Quotes";
 
 const StyledMainContent = styled(Main)`
@@ -9,8 +10,9 @@ const StyledMainContent = styled(Main)`
 
 export const MainContent = () => {
   return (
-    <StyledMainContent>
+    <StyledMainContent gap="small">
       <QuotesCarousel />
+      <AboutMe />
     </StyledMainContent>
   );
 };
