@@ -1,7 +1,7 @@
 import { Main } from "grommet";
 import styled from "styled-components";
 import { AboutMe } from "../about-me/AboutMe";
-import { QuotesCarousel } from "../quotes/Quotes";
+import { QuotesCarousel } from "../quotes/QuotesCarousel";
 
 const StyledMainContent = styled(Main)`
   flex: 1;

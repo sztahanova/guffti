@@ -1,19 +1,16 @@
-import CSS from "csstype";
-
-export type TextPosition = {
-  top?: number | string;
-  right?: number | string;
-  bottom?: number | string;
-  left?: number | string;
-  transform?: string;
-  textAlign?: CSS.Property.TextAlign;
+export type Quote = {
+  quote: string;
+  author: string;
 };
 
-export type QuoteCarouselItemProps = {
-  index: number;
+export type QuoteWithType = {
   quote: string;
-  imagePosition?: string;
-  textPosition?: TextPosition;
-  backgroundColor?: string;
-  textColor?: string;
+  author: string;
+  type: QuoteWithType;
+};
+
+export type QuoteProps = {
+  quote: Quote;
+
+  backgroundColor: string;
 };
