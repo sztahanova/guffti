@@ -1,5 +1,5 @@
 import { Box, Carousel } from "grommet";
-import Rocky from "../../assets/rocky-quotes.json";
+import Rocky from "../../../assets/rocky-quotes.json";
 import { QuoteCarouselItem } from "./QuoteCarouselItem";
 
 const heightPerWidth = 0.35;

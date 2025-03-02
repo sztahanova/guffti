@@ -1,4 +1,4 @@
-import { Quote } from "../Quote.types";
+import { Quote, QuoteCategory } from "../Quote.types";
 
 export type QuotesContextContent = {
   goals: Quote[];
@@ -8,4 +8,5 @@ export type QuotesContextContent = {
   success: Quote[];
   allQuotes: Quote[];
   getQuotesByAuthor: (author: string) => Quote[];
+  getQuotesByCategory: (category: QuoteCategory) => Quote[];
 };

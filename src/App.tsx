@@ -6,6 +6,7 @@ import { Footer } from "./components/footer/Footer";
 import { Header } from "./components/header/Header";
 import { MainContent } from "./components/main-content/MainContent";
 import { QuotesContextProvider } from "./components/quotes/context/QuotesContextProvider";
+import { QuotePage } from "./components/quotes/QuotePage";
 import { gufftiTheme } from "./theme";
 
 const FlexGrommet = styled(Grommet)`
@@ -13,8 +14,20 @@ const FlexGrommet = styled(Grommet)`
   flex-flow: column nowrap;
 `;
 
+const App = () => {
+  return (
+    <FlexGrommet full theme={gufftiTheme}>
+      <QuotesContextProvider>
+        <Header />
+        <Outlet />
+        <Footer />
+      </QuotesContextProvider>
+    </FlexGrommet>
+  );
+};
+
 const homePage: RouteObject = {
-  path: "/home",
+  path: "/",
   element: <MainContent />,
 };
 
@@ -27,21 +40,7 @@ const root: RouteObject = {
   path: "/",
   element: <App />,
   errorElement: <ErrorPage />,
-  children: [homePage],
+  children: [homePage, quotePage],
 };
 
-const router = createBrowserRouter([root]);
-
-function App() {
-  return (
-    <FlexGrommet full theme={gufftiTheme}>
-      <QuotesContextProvider>
-        <Header />
-        <Outlet />
-        <Footer />
-      </QuotesContextProvider>
-    </FlexGrommet>
-  );
-}
-
-export default App;
+export const router = createBrowserRouter([root]);
