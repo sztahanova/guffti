@@ -10,22 +10,14 @@ export const QuoteCarouselItem: FC<QuoteCarouselItemProps> = ({
   textPosition = {},
   textColor = "midnightblue",
 }: QuoteCarouselItemProps) => {
-  const {
-    top,
-    right,
-    bottom,
-    left,
-    transform,
-    textAlign = "center",
-  } = textPosition;
+  const { top, right, bottom, left, transform, textAlign = "center" } = textPosition;
 
   return (
     <Box
       fill
       background={{
         color: backgroundColor,
-        image:
-          index != null ? `url(3per2/shark_${index}_800x533.jpg)` : undefined,
+        image: index != null ? `url(${process.env.PUBLIC_URL}/3per2/shark_${index}_800x533.jpg)` : undefined,
         size: "cover",
         position: imagePosition,
       }}

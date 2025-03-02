@@ -1,5 +1,5 @@
 import { Grommet } from "grommet";
-import { createBrowserRouter, Outlet, RouteObject } from "react-router-dom";
+import { createBrowserRouter, Navigate, Outlet, RouteObject } from "react-router-dom";
 import styled from "styled-components";
 import { ErrorPage } from "./components/error-page/ErrorPage";
 import { Footer } from "./components/footer/Footer";
@@ -31,16 +31,26 @@ const homePage: RouteObject = {
   element: <MainContent />,
 };
 
+const redirectHomePage: RouteObject = {
+  path: "/guffti",
+  element: <Navigate to="/" replace />,
+};
+
 const quotePage: RouteObject = {
   path: "/quote",
   element: <QuotePage />,
+};
+
+const noMatch: RouteObject = {
+  path: "*",
+  element: <Navigate to="/" replace />,
 };
 
 const root: RouteObject = {
   path: "/",
   element: <App />,
   errorElement: <ErrorPage />,
-  children: [homePage, quotePage],
+  children: [homePage, redirectHomePage, quotePage, noMatch],
 };
 
 export const router = createBrowserRouter([root]);

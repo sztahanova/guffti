@@ -1,9 +1,9 @@
 import { createContext, PropsWithChildren, useCallback, useEffect, useState } from "react";
-import goalsQuotes from "../../../assets/goals-quotes.json";
-import growthQuotes from "../../../assets/growth-quotes.json";
-import perseverenceQuotes from "../../../assets/perseverence-quotes.json";
-import selfEsteemQuotes from "../../../assets/self-esteem-quotes.json";
-import successQuotes from "../../../assets/success-quotes.json";
+import goalsQuotes from "../../../assets/quotes/goals-quotes.json";
+import growthQuotes from "../../../assets/quotes/growth-quotes.json";
+import perseverenceQuotes from "../../../assets/quotes/perseverence-quotes.json";
+import selfEsteemQuotes from "../../../assets/quotes/self-esteem-quotes.json";
+import successQuotes from "../../../assets/quotes/success-quotes.json";
 import { Quote, QuoteCategory, RawQuote } from "../Quote.types";
 import { QuotesContextContent } from "./QuotesContext.types";
 
