@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "/guffti/static/css/main.ce2f63fe.css",
-    "main.js": "/guffti/static/js/main.b014c64b.js",
-    "static/js/453.f1c5d21d.chunk.js": "/guffti/static/js/453.f1c5d21d.chunk.js",
-    "static/media/shark_256x256.svg": "/guffti/static/media/shark_256x256.0b3ac898b35a9013376ad42220acd537.svg",
-    "index.html": "/guffti/index.html",
-    "main.ce2f63fe.css.map": "/guffti/static/css/main.ce2f63fe.css.map",
-    "main.b014c64b.js.map": "/guffti/static/js/main.b014c64b.js.map",
-    "453.f1c5d21d.chunk.js.map": "/guffti/static/js/453.f1c5d21d.chunk.js.map"
+    "main.css": "%PUBLIC_URL%/static/css/main.ce2f63fe.css",
+    "main.js": "%PUBLIC_URL%/static/js/main.b014c64b.js",
+    "static/js/453.f1c5d21d.chunk.js": "%PUBLIC_URL%/static/js/453.f1c5d21d.chunk.js",
+    "static/media/shark_256x256.svg": "%PUBLIC_URL%/static/media/shark_256x256.0b3ac898b35a9013376ad42220acd537.svg",
+    "index.html": "%PUBLIC_URL%/index.html",
+    "main.ce2f63fe.css.map": "%PUBLIC_URL%/static/css/main.ce2f63fe.css.map",
+    "main.b014c64b.js.map": "%PUBLIC_URL%/static/js/main.b014c64b.js.map",
+    "453.f1c5d21d.chunk.js.map": "%PUBLIC_URL%/static/js/453.f1c5d21d.chunk.js.map"
   },
-  "entrypoints": [
-    "static/css/main.ce2f63fe.css",
-    "static/js/main.b014c64b.js"
-  ]
+  "entrypoints": ["static/css/main.ce2f63fe.css", "static/js/main.b014c64b.js"]
 }
