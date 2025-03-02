@@ -33,7 +33,7 @@ const homePage: RouteObject = {
 
 const redirectHomePage: RouteObject = {
   path: "/guffti",
-  element: <Navigate to="/" replace />,
+  element: <MainContent />,
 };
 
 const quotePage: RouteObject = {
