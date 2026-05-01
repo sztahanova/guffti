@@ -5,7 +5,7 @@ import globalStyles from "../../utils/global.styles";
 export const AboutMe = () => {
   return (
     <Box
-      height={{ height: "medium", min: "medium", max: "medium" }}
+      height={{ height: "100%", min: "medium" }}
       pad="medium"
       gap="medium"
       background="accent-2"
@@ -15,10 +15,10 @@ export const AboutMe = () => {
         display: "flex",
       }}
     >
-      <Box style={{ aspectRatio: "1/1", borderRadius: 20 }} flex={{ grow: 1, shrink: 1 }} background="white">
+      <Box style={{ aspectRatio: "1/1", borderRadius: 20 }} height={{ height: "medium" }} flex={{ grow: 1, shrink: 1 }} background="white">
         <Image src={`${process.env.PUBLIC_URL}/guffti2.png`} fit="contain" height="100%" />
       </Box>
-      <Box gap="large" overflow="auto" flex={{ grow: 1, shrink: 2 }}>
+      <Box gap="large" flex={{ grow: 1, shrink: 2 }}>
         <Text size="xxlarge" color="white">
           A nevem Gufftáv. Gufftáv Gufftávfon. Af elfő éf leghírefebb üfletffápa.
         </Text>

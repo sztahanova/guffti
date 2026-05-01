@@ -1,11 +1,13 @@
-import { ThemeType } from "grommet";
+import { DefaultTheme } from "styled-components";
 
-export const gufftiTheme: ThemeType = {
+export const gufftiTheme: DefaultTheme = {
   global: {
     colors: {
       brand: "#0071aa",
       "accent-1": "#1081c4",
       "accent-2": "#47a9de",
+      "accent-3": "#009b8d",
+      "accent-4": "#e39e22",
       background: {
         dark: "#111111",
         light: "#FFFFFF",
@@ -52,8 +54,11 @@ export const gufftiTheme: ThemeType = {
       "status-ok": "#00C781",
       "status-unknown": "#CCCCCC",
       "status-disabled": "#CCCCCC",
-      "graph-0": "brand",
-      "graph-1": "status-warning",
+      "graph-0": "#0094be",
+      "graph-1": "#00b5ba",
+      "graph-2": "#18d2a2",
+      "graph-3": "#98e983",
+      "graph-4": "#f9f871",
       focus: "#6dc5f0",
     },
     font: {

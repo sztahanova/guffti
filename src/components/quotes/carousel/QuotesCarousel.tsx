@@ -16,7 +16,7 @@ export const QuotesCarousel = () => {
       overflow="hidden"
       style={{ borderRadius: 30 }}
     >
-      <Carousel play={10000} fill>
+      <Carousel wrap play={10000} fill>
         <QuoteCarouselItem quote={Rocky.rocky_1} index={1} imagePosition="bottom" textPosition={{ left: "50%", right: 20 }} />
         <QuoteCarouselItem
           quote={Rocky.rocky_2}

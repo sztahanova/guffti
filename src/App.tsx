@@ -1,4 +1,4 @@
-import { Grommet } from "grommet";
+import { Box, Grommet } from "grommet";
 import { createBrowserRouter, Navigate, Outlet, RouteObject } from "react-router-dom";
 import styled from "styled-components";
 import { ErrorPage } from "./components/error-page/ErrorPage";
@@ -8,21 +8,24 @@ import { MainContent } from "./components/main-content/MainContent";
 import { QuotesContextProvider } from "./components/quotes/context/QuotesContextProvider";
 import { QuotePage } from "./components/quotes/QuotePage";
 import { gufftiTheme } from "./theme";
+import { TeamPage } from "./components/team/TeamPage";
 
-const FlexGrommet = styled(Grommet)`
+const FlexBox = styled(Box)`
   display: flex;
   flex-flow: column nowrap;
 `;
 
 const App = () => {
   return (
-    <FlexGrommet full theme={gufftiTheme}>
-      <QuotesContextProvider>
-        <Header />
-        <Outlet />
-        <Footer />
-      </QuotesContextProvider>
-    </FlexGrommet>
+    <Grommet full theme={gufftiTheme}>
+      <FlexBox>
+        <QuotesContextProvider>
+          <Header />
+          <Outlet />
+          <Footer />
+        </QuotesContextProvider>
+      </FlexBox>
+    </Grommet>
   );
 };
 
@@ -41,6 +44,11 @@ const quotePage: RouteObject = {
   element: <QuotePage />,
 };
 
+const teamPage: RouteObject = {
+  path: "/team",
+  element: <TeamPage />,
+};
+
 const noMatch: RouteObject = {
   path: "*",
   element: <Navigate to="/" replace />,
@@ -50,7 +58,7 @@ const root: RouteObject = {
   path: "/",
   element: <App />,
   errorElement: <ErrorPage />,
-  children: [homePage, redirectHomePage, quotePage, noMatch],
+  children: [homePage, redirectHomePage, quotePage, teamPage, noMatch],
 };
 
 export const router = createBrowserRouter([root]);
